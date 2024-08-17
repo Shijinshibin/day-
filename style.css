@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#toggleButton {
+  margin: 5%;
+}
+
+.day-toggle {
+  position: absolute;
+  right: 0%;
+  top: 0%;
+}
+
+.container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+.switch {
+  width: 100px;
+  height: 40px;
+  display: inline-block;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  background-color: white;
+  width: inherit;
+  height: inherit;
+  border-radius: 34px;
+  cursor: pointer;
+}
+
+.slider:before {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  background-color: #469CCE;
+  transition: .4s, background-color 1s linear;
+  -webkit-transition: .4s, background-color 1s linear;
+  -moz-transition: .4s, background-color 1s linear;
+  -o-transition: .4s, background-color 1s linear;
+}
+
+input:checked + .slider:before {
+  background-color: #2c3e50;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(60px);
+  -ms-transform: translateX(60px);
+  transform: translateX(60px);
+}
